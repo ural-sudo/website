@@ -17,3 +17,5 @@ mssql is used as database.
 If you want to download and run the code, you should make the necessary adjustments by looking at the (npm session docs) section so that the session section is active.
 
 You should make sure that all 3rd party software used and required during the programming phase is installed.
+
+This application written with NodeJS( javacript library ) , ejs and css.
