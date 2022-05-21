@@ -1,0 +1,39 @@
+<%-include('Includes/head.ejs') %>
+<link rel="stylesheet" href="/edit-profile.css">
+</head>
+<body>
+    
+<%-include('Includes/navigation.ejs') %>
+
+    <main>
+        <div class="edit-container">
+            <div class="form-container">
+                <form action="/profile/edit-profile" method="post">
+                    <div class="form-item">
+                        <label for="">Name</label>
+                        <input name="name" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">surname</label>
+                        <input name="surname" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">email</label>
+                        <input name="email" type="email">
+                    </div>
+                    <div class="form-item">
+                        <label for="">password</label>
+                        <input name="password" type="password">
+                    </div>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+
+<%-include('Includes/end.ejs') %> 

@@ -1,0 +1,44 @@
+<%-include('Includes/head.ejs') %>
+</head>
+<body>
+<%-include('Includes/navigation.ejs') %>
+
+    <main>
+        <div class="add-container">
+
+            <div class="add-form" >
+                <form action="/authority/editShoes" method="post">
+                    <div class="form-item">
+                        <label for="">title</label>
+                        <input name="title" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">price</label>
+                        <input name="price" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">img</label>
+                        <input name="imgUrl" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">description</label>
+                        <input name="description" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">category</label>
+                        <input name="category" type="text">
+                    </div>
+                    <div>
+                        <input type="hidden" name="shoesId" value="<%= shoes.id%>">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+
+
+
+<%-include('Includes/end.ejs') %> 

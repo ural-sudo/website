@@ -1,0 +1,35 @@
+<%-include('Includes/head.ejs') %> 
+<link rel="stylesheet" href="/admin-page.css">
+</head>
+<body>
+<%-include('Includes/navigation.ejs') %> 
+
+    <main>
+        <% if(users.length > 0) { %> 
+            <% for(let kullanıcı of users) { %> 
+                <div class="user-container">
+                    <form action="/admin/authority" method="post">
+                        <div class="user-item">
+                            <div class="user-item__info">
+                                <span>Id:</span><%= kullanıcı.id %>  <span>Name:</span><%= kullanıcı.name %> <%= kullanıcı.surname %>   <span>Email:</span><%= kullanıcı.email %> 
+                            </div>
+                            <div class="selector">
+                                    <select name="authority" id="">
+                                        <option value='<% if(kullanıcı.authority) { %>true<% }else{ %>false<% } %>'><% if(kullanıcı.authority) { %>true<% }else{ %>false<% } %>   </option>
+                                        <option value="<% if(kullanıcı.authority) { %>false<% }else{ %>true<% } %> "><% if(kullanıcı.authority) { %>false<% }else{ %>true<% } %>  </option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="hidden" name="userId" value="<%= kullanıcı.id %> ">
+                            <button type="submit">Değiştir</button>
+                        </div>
+                        
+                    </form>    
+                </div>
+            <% } %> 
+        <% } %> 
+
+    </main>
+    
+<%-include('Includes/end.ejs') %> 

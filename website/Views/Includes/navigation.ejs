@@ -1,0 +1,69 @@
+
+
+<header>
+    <div class="container">
+             
+                <div class="nav-container">
+                    <div class="logo">
+                        <h2><a href="/">Shoeses.com</a></h2>
+                    </div>
+                    <div>
+                        <form action="">
+                            <div class="search-div">
+                                <input class="input" type="text">
+                                <button>Search</button>
+                            </div>
+                        </form>
+                    </div>
+                <% if(!isAuthenticated) { %>
+                    <div>
+                        <ul class="login-list">
+                            <li class="login-list__item">
+                                <a href="/auth/giris">User Login</a>
+                            </li>
+                            <li class="login-list__item">
+                                <a href="/admin/login">Admin Login</a>
+                            </li>
+                            <li class="login-list__item"><a href="/auth/kayit-giris">Sign Up</a></li>
+                        </ul>
+                    </div>
+                <% } else { %> 
+                        <div>
+                            <ul class="login-list">
+                                <li class="login-list__item"><a href="/profile/profile"><%= user.name %></a> </li>
+                                <% if( authority == true){ %> 
+                                    <li class="login-list__item"><a href="/authority/myShoes">MyShoes</a></li>
+                                    <li class="login-list__item"><a href="/authority/addShoes">AddShoes</a></li>
+                                <% } %> 
+                                <% if(isAdmin) { %>
+                                    <li class="login-list__item"><a href="/admin/userInfo">User Info</a></li>
+                                <% } %>      
+                                <% if(!isAdmin) { %> 
+                                    <li class="login-list__item"><a href="">Sepetim</a></li>
+                                <% } %> 
+                                <li class="login-list__item">
+                                    <form action="/auth/logout" method="post">
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                <% } %> 
+            </div>
+            <div class="category">
+                <ul class="category-list">
+                    <li class="list-item"><a href="/sport">Sport</a></li>
+                    <li class="list-item"><a href="/boat">Boat</a></li>
+                    <li class="list-item"><a href="/heeledShoes">Heeled Shoes</a></li>
+                    <li class="list-item"><a href="/flat">Flat</a></li>
+                    <li class="list-item"><a href="/slipper">Slipper</a></li>
+                    <li class="list-item"><a href="/sneaker">Sneaker</a></li>
+                    <li class="list-item"><a href="/spake">Spake</a></li>
+                </ul>
+            </div>
+         
+    </div>
+
+
+
+</header>

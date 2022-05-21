@@ -1,0 +1,41 @@
+<%- include('Includes/head.ejs') %>
+    <link rel="stylesheet" href="/profile.css">
+</head>
+<body>
+    
+<%- include('Includes/navigation.ejs') %>
+
+    <main>
+        <div class="pro-container">
+            <div class="top">
+                <h1>Your Profile </h1>
+            </div>
+            <div class="profile">
+                <div class="profile-item">
+                    <h4><%= user.name %> </h4>
+                </div>
+                <div class="profile-item">
+                    <h4><%= user.surname %> </h4>
+                </div>
+                <div class="profile-item">
+                    <h4><%= user.email %> </h4>
+                </div>
+                <div class="profile-item">
+                    <h4><%= user.password %> </h4>
+                </div>
+                <% if(user.isAdmin == false){ %> 
+                <div class="is admin">
+                    <p>Admin yetkisine sahip değilsiniz</p>
+                </div>
+                <% } %> 
+                <div class="guncelle">
+                    <a href="/profile/edit-profile">Bilgilerimi Güncelle</a>
+                </div>
+                
+            </div>
+        </div>
+
+    </main>
+
+
+<%- include('Includes/end.ejs') %>    

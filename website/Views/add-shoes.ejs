@@ -1,0 +1,50 @@
+<%-include('Includes/head.ejs') %>
+</head>
+<body>
+<%-include('Includes/navigation.ejs') %>
+
+    <main>
+        <div class="add-container">
+
+            <div class="add-form" >
+                <form action="/authority/addShoes" method="post" enctype="multipart/form-data">
+                    <div class="form-item">
+                        <label for="">title</label>
+                        <input name="title" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">price</label>
+                        <input name="price" type="text">
+                    </div>
+                    <div class="form-item">
+                        <label for="">img</label>
+                        <input name="image" type="file">
+                    </div>
+                    <div class="form-item">
+                        <label for="">description</label>
+                        <input name="description" type="text">
+                    </div>
+                    <div class="form-item">
+                        <select name="category" id="">
+                            <option value="sport">Sport</option>
+                            <option value="Boat">Boat</option>
+                            <option value="Heeled Shoes">Heeled Shoes</option>
+                            <option value="Flat">Flat</option>
+                            <option value="Slipper">Slipper</option>
+                            <option value="Sneaker">Sneaker</option>
+                            <option value="Spake">Spake</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+
+
+
+<%-include('Includes/end.ejs') %> 

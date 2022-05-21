@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/kayit-giris.css">
+
+</head>
+<body>
+    
+
+    <div class="container">
+
+
+        <form action="/auth/kayit-giris" id="form" class="form" method="post">
+
+            <div class="header">
+                <h2>Create Account</h2>
+            </div>
+
+            <div class="form-control">
+                <label for="Name">Name</label>
+                <input type="text" name="name" placeholder="name" id="name" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="surname" placeholder="lastname" id="lastname" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="example@gmail.com" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="password" id="password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <button type="sumbit">Register</button>
+            <p class="message">Click for <a href="/auth/giris">Login</a></p>
+
+        </form>
+
+        <form action="#" class="form form-login">
+
+            <div class="header">
+                <h2>Login</h2>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@gmail.com" id="login_email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" placeholder="password" id="login_password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <button>Login</button>
+            <p class="message">Click for <a href="#">Registration</a></p>
+
+        </form>
+
+    </div>
+
+
+</body>
+</html>

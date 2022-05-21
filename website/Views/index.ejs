@@ -1,0 +1,33 @@
+<%-include('Includes/head.ejs') %>
+<link rel="stylesheet" href="/grid.css">
+</head>
+<body>
+    <%-include('Includes/navigation.ejs') %>
+
+    <main>
+
+         <div class="shoes-container">
+            <% if(shoes.length > 0) { %>
+                <% for( let sho of shoes) { %>  
+                    <div class="shoes-item">
+                        <div class="shoes-item__title">
+                            <%= sho.title %> 
+                        </div>
+                        <div class="shoes-item__img">
+                            <img src="/<%= sho.imgUrl %> " alt="resimyok">
+                        </div>
+                        <div class="shoes-item__price">
+                            <%= sho.price %> <span>TL</span>
+                        </div>
+                        <div class="shoes-item__desc">
+                            <%= sho.description %> 
+                        </div>
+                    </div>
+                <% } %> 
+            <% } %> 
+        </div>
+    </main>
+
+
+
+<%-include('Includes/end.ejs')  %> 

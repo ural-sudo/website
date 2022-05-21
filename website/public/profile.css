@@ -1,0 +1,15 @@
+
+.pro-container{
+    background-color: aqua;
+    margin-top: 50px;
+    align-items: center;
+}
+.top{
+    text-align: center;
+}
+.profile{
+    margin: 0px 650px;
+    margin-top: 50px;
+    border: 1px solid black;
+    align-items: center;
+}
