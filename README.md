@@ -4,6 +4,10 @@ Hı everyone.
 
 The application in this repo is a website similar to trendyol.
 
+This app is  like  shoes market. There is one admin in this system as a manager. The other users are just customer. But if admin wants, it can make a authorized user  to any user. When the user is authorized,  it can upload own products(shoes) and it can make sales.
+
+There are no buttons and pages related to the sales method and purchase.
+
 Errors that may occur in the application have not been handled. Therefore, no feedback is provided to the user when an error occurs.
 
 At the same time, no validation adjustments were made.
