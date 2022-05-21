@@ -4,7 +4,7 @@ Hı everyone.
 
 The application in this repo is a website similar to trendyol.
 
-Errors that may occur in the application have not been addressed. Therefore, no feedback is provided to the user when an error occurs.
+Errors that may occur in the application have not been handled. Therefore, no feedback is provided to the user when an error occurs.
 
 At the same time, no validation adjustments were made.
 
